@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { BottomSheetComponent } from '../bottom-sheet/bottom-sheet.component';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { MatSort } from '@angular/material/sort';
+import { MatPaginator } from '@angular/material/paginator';
 
 
 @Component({
@@ -11,10 +15,17 @@ import { MatTableDataSource } from '@angular/material/table';
 
 export class HomeComponent implements OnInit {
 
-    constructor() { }
+    constructor(private _bottomSheet: MatBottomSheet) { }
+
+    @ViewChild(MatSort, { static: true }) sort: MatSort;
+    @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+
 
     ngOnInit(): void {
+        this.dataSource.sort = this.sort;
+        this.dataSource.paginator = this.paginator;
     }
+
 
     ELEMENT_DATA: any[] = [
         { houseNumber: 7475, ownerName: 'Dev Bajracharya', phoneNumber: 9851050430, email: 'H', fullAddress: 'Pasang Lahmu Salik, Chuchepati, Chabahil' },
@@ -38,10 +49,6 @@ export class HomeComponent implements OnInit {
     }
 
     showRowData(row: any): void {
-    }
-
-
-    openBottomSheet(): void {
-
+        this._bottomSheet.open(BottomSheetComponent);
     }
 }

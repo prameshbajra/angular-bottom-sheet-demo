@@ -14,14 +14,14 @@ import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
         HomeComponent,
         BottomSheetComponent
     ],
+    imports: [
+        AppRoutingModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+    ],
     entryComponents: [
         BottomSheetComponent
-    ],
-    imports: [
-        BrowserModule,
-        MaterialModule,
-        AppRoutingModule,
-        BrowserAnimationsModule
     ],
     providers: [
     ],
