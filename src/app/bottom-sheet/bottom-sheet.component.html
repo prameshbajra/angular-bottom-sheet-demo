@@ -1,5 +1,26 @@
-<mat-nav-list class = "bottom-sheet">
-    Pramesh
-    <br>
-    Bajra
+<mat-nav-list class="bottom-sheet">
+  <h2>Family Details</h2>
+  <mat-card class="example-card" *ngFor="let familyMember of familyDetails">
+    <mat-card-header>
+      <mat-card-title>{{familyMember.name}}</mat-card-title>
+      <mat-card-subtitle>Phone number : {{familyMember.phoneNumber}}</mat-card-subtitle>
+      <p>
+        E-mail : {{familyMember.email}}
+      </p>
+    </mat-card-header>
+  </mat-card>
+  <br>
+  <hr>
+
+  <h2>Rent Details</h2>
+  <mat-card class="example-card" *ngFor="let rentMember of rentDetails">
+    <mat-card-header>
+      <mat-card-title>{{rentMember.name}}</mat-card-title>
+      <mat-card-subtitle>Phone number : {{rentMember.phoneNumber}}</mat-card-subtitle>
+      <br>
+      <p>
+        E-mail : {{rentMember.email}}
+      </p>
+    </mat-card-header>
+  </mat-card>
 </mat-nav-list>

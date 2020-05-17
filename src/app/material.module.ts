@@ -6,6 +6,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatCardModule } from '@angular/material/card';
+
 
 
 @NgModule({
@@ -16,7 +19,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
         MatSidenavModule,
         MatListModule,
         MatBottomSheetModule,
-        MatPaginatorModule
+        MatPaginatorModule,
+        MatChipsModule,
+        MatCardModule,
     ],
     exports: [
         MatFormFieldModule,
@@ -25,7 +30,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
         MatSidenavModule,
         MatListModule,
         MatBottomSheetModule,
-        MatPaginatorModule
+        MatPaginatorModule,
+        MatChipsModule,
+        MatCardModule
     ]
 })
 
