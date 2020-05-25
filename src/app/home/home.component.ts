@@ -101,7 +101,7 @@ export class HomeComponent implements OnInit {
 
     showRowData(row: any): void {
         this._bottomSheet.open(BottomSheetComponent, {
-            data: row,
+            data: row, panelClass: 'custom-width'
         });
     }
 }
