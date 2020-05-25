@@ -1,5 +1,9 @@
 .bottom-sheet {
 
+  h1 {
+    text-align: center;
+  }
+
   .example-card {
     margin: 10px;
   }
@@ -8,6 +12,8 @@
     background-color: #eee;
     border-radius: 5px;
     display: block;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 
 
